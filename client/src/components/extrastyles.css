@@ -1,0 +1,139 @@
+*{
+
+    font-family: 'Abel', sans-serif;
+}
+body{
+    background-color: rgb(237,237,237);
+}
+
+.Navbar {
+    overflow: hidden;
+    height: 70px;
+    background-color: #006cff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.Name{
+    background-color: #006cff;;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: bolder;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+li{
+    background-color: #fafafa !important;
+    height: 60px;
+    margin-top: 12px;
+}
+
+li:hover{
+    background-color: #bbbbbb !important;
+}
+ul{
+    padding: 5px;
+    padding-top: 2px;
+}
+p{
+    font-size: 20px;
+}
+img{
+    /* margin-left: 5px !important; */
+    height: 45px;
+    width: 50px;
+    float: left;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+img.myProfile{
+    float: right;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+#largeChatWindow{
+    width: 66%;
+    font-size: 6px;
+    border: 2px solid black;
+    float: right;
+    height: 500px;
+    overflow: scroll;
+}
+#largeContacts{
+    width: 33%;
+    margin-right: 5px;
+    padding-left: 2px;
+}
+
+#container{
+    display: table;
+    clear: both;
+
+}
+.inputs{
+    margin-bottom: 2px;
+}
+.textInput{
+    resize: none;
+    width: 75%;
+    align-content: center;
+}
+@media (min-width: 639px) {
+    #Small {
+        display: none;
+    }
+}
+
+
+@media (max-width: 639px) {
+    #largeContacts {
+        display: none;
+    }
+    #largeChatWindow {
+        display: none;
+    }
+
+}
+.miniNavbar {
+    background-color: rgb(6,175,249);
+    width: 100vw;
+    overflow: hidden;
+    height: 40px;
+    padding: none;
+}
+
+.messaging{
+   float: left;
+   background-color: rgb(6,175,249);
+   color: white;
+}
+.calls{
+    padding: 130px;
+    text-align: center;
+    background-color: rgb(6,175,249);
+    color: white;
+}
+.stories{
+   float: right;
+   background-color: rgb(6,175,249);
+   color: white;
+}
+.chatWindowLarge{
+    background-color: red;
+}
+.chatWindowSmall{
+    background-color: royalblue;
+}
+.chatWindowH1{
+    text-align: right;
+}
+.topic{
+    float: right;
+}

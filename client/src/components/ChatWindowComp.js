@@ -1,12 +1,12 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment} from "react";
 import "./extrastyles.css";
+
+
 
 const ChatWindow = () => {
 
     return(
         <Fragment>
-
-            //HTML COMES HERE
 
         </Fragment>
     );

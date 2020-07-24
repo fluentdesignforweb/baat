@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Route, NavLink, Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
-import AppView from "./AppViewComp";
 
 const Login = () => {
 
