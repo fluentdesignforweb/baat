@@ -1,10 +1,11 @@
 *{
-
     font-family: 'Abel', sans-serif;
 }
 body{
-    background-color: rgb(237,237,237);
+    background-color: #D4D4D4;
 }
+
+/* Styles for MessagingComponent */
 
 .Navbar {
     overflow: hidden;
@@ -13,8 +14,7 @@ body{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-
-.Name{
+.appName{
     background-color: #006cff;;
     color: white;
     letter-spacing: 2px;
@@ -23,31 +23,6 @@ body{
     float: left;
     margin-top: 20px;
     margin-left: 10px;
-}
-
-li{
-    background-color: #fafafa !important;
-    height: 60px;
-    margin-top: 12px;
-}
-
-li:hover{
-    background-color: #bbbbbb !important;
-}
-ul{
-    padding: 5px;
-    padding-top: 2px;
-}
-p{
-    font-size: 20px;
-}
-img{
-    /* margin-left: 5px !important; */
-    height: 45px;
-    width: 50px;
-    float: left;
-    border-radius: 50px;
-    border: 1px solid white;
 }
 img.myProfile{
     float: right;
@@ -58,37 +33,87 @@ img.myProfile{
     margin-right: 10px;
 }
 
-#largeChatWindow{
-    width: 66%;
-    font-size: 6px;
-    border: 2px solid black;
-    float: right;
-    height: 500px;
-    overflow: scroll;
+li{
+    background-color: #fafafa !important;
+    height: 60px;
+    margin-top: 12px;
 }
+
+li:hover{
+    background-color: #bbbbbb !important;
+    cursor: pointer;
+}
+ul{
+    padding: 5px;
+    padding-top: 2px;
+}
+img{
+    margin-left: 5px !important;
+    height: 45px;
+    width: 50px;
+    float: left;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+/* Mini Navigation bar for small screens */
+.miniNavbar {
+    background-color: rgb(6,175,249);
+    overflow: hidden;
+    height: 57px;
+    width: 100vw;
+    padding: none;
+}
+.navbarOptions{
+    margin-top: 15px;
+}
+a.active{
+    color: white;
+    text-decoration: underline;
+}
+a:hover{
+    color: white;
+    cursor: pointer;
+}
+.messaging{
+    margin-left: 10px;
+    background-color: rgb(6,175,249);
+ }
+ .calls{
+    width: 20px;
+    margin-left: 35vw;
+    margin-right: 35vw;
+
+ }
+ .stories{
+     margin-right: 10px;
+
+ }
+ /* End of mini Navbar */
 #largeContacts{
     width: 33%;
     margin-right: 5px;
     padding-left: 2px;
 }
 
-#container{
-    display: table;
-    clear: both;
-
-}
-.inputs{
-    margin-bottom: 2px;
-}
-.textInput{
-    resize: none;
-    width: 75%;
-    align-content: center;
-}
+/* Media Queries for Responsiveness*/
 @media (min-width: 639px) {
-    #Small {
+    #smallContacts {
         display: none;
     }
+    #smallChatWindow {
+        display: none;
+    }
+    .textContainer{
+        height: 91vh;
+    }
+    .textInput{
+        width: 50vw;
+    }
+    .textInput{
+        width: 70vw;
+    }
+
+
 }
 
 
@@ -99,41 +124,132 @@ img.myProfile{
     #largeChatWindow {
         display: none;
     }
+    .textContainer{
+        height: 100vh;
+    }
+    .textInput{
+        width: 80vw !important;
+    }
+    .userButtons{
+        margin-left: 83vw !important;
+    }
+    .sendButton{
+        width: 9vw !important;
+    }
+}
+/* Chat window styles */
 
-}
-.miniNavbar {
-    background-color: rgb(6,175,249);
-    width: 100vw;
-    overflow: hidden;
-    height: 40px;
-    padding: none;
-}
-
-.messaging{
-   float: left;
-   background-color: rgb(6,175,249);
-   color: white;
-}
-.calls{
-    padding: 130px;
-    text-align: center;
-    background-color: rgb(6,175,249);
-    color: white;
-}
-.stories{
-   float: right;
-   background-color: rgb(6,175,249);
-   color: white;
-}
-.chatWindowLarge{
-    background-color: red;
-}
-.chatWindowSmall{
-    background-color: royalblue;
-}
-.chatWindowH1{
-    text-align: right;
-}
-.topic{
+#largeChatWindow{
+    width: 65%;
+    /* position: absolute; */
+    font-size: 6px;
+    border-left: 2px solid black;
+    border-left-width: thin;
     float: right;
+    min-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 5px;
 }
+#smallChatWindow{
+    width: 96%;
+    font-size: 6px;
+    border: 2px solid black;
+    float: right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 90%;
+    margin: 10px;
+}
+.userNavbar{
+    margin-top: 0px;
+    background-color: rgb(6,175,249);
+    height: 50px;
+    width: 96;
+    border-bottom: 3px solid black;
+}
+.userNameSmall, .userNameBig{
+    font-size: 30px;
+    margin-left: 10px;
+}
+i{
+    padding: 10px;
+    font-size: large;
+}
+/* User input */
+.textInput{
+    margin-bottom: 8px;
+    resize: none;
+    height: 50px;
+    width: 53vw;
+    font-size: 18px;
+}
+.userInputs{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+}
+.sendButton{
+    cursor: pointer;
+    overflow: hidden;
+    height: 50px;
+    margin-bottom: 20px;
+    width: 7vw;
+}
+.userButtons{
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 55vw;
+    margin-bottom: 20px;
+}
+/* Chat Bubbles */
+.box-input {
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 40vw;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    padding: 20px;
+    color: black;
+    position: relative;
+  }
+  .box-output {
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 40vw;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+    padding: 20px;
+    color: black;
+    position: absolute;
+    right: 0px;
+  }
+  .rightTriangle:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid rgb(116,202,247);
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(116,202,247);
+    border-bottom: 10px solid transparent;
+    right: -19px;
+    top: 6px;
+  }
+  .leftTriangle:before {
+    content: "";
+    width: 0px;
+    right: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid rgb(131,234,241);
+    border-top: 10px solid rgb(131,234,241);
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 6px;
+  }
